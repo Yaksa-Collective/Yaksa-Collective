@@ -177,21 +177,20 @@
       <p class="mt-4 text-slate-700 max-w-prose">Queries, collaborations, bookings — we’d love to hear from you.</p>
       <div class="mt-6 grid md:grid-cols-2 gap-6">
         <div class="rounded-2xl bg-white border p-6 shadow-sm">
-          <form id="contactForm" action="https://formspree.io/f/xvgvlkld" method="POST" class="grid gap-4">
+         <form id="contactForm" action="https://formspree.io/f/xvgvlkld" method="POST" class="grid gap-4">
+  <input type="hidden" name="_subject" value="Yaksa website message" />
+  <label class="text-sm">Name
+    <input required name="name" class="mt-1 w-full rounded-xl border p-2" />
+  </label>
+  <label class="text-sm">Email
+    <input required name="_replyto" type="email" class="mt-1 w-full rounded-xl border p-2" />
+  </label>
+  <label class="text-sm">Message
+    <textarea required name="message" rows="4" class="mt-1 w-full rounded-xl border p-2"></textarea>
+  </label>
+  <button class="mt-2 inline-flex justify-center px-5 py-3 rounded-2xl bg-teal-600 text-white font-medium shadow hover:bg-teal-700">Send</button>
+</form>
 
-
-            <label class="text-sm">Name
-              <input required name="name" class="mt-1 w-full rounded-xl border p-2" />
-            </label>
-            <label class="text-sm">Email
-              <input required name="email" type="email" class="mt-1 w-full rounded-xl border p-2" />
-            </label>
-            <label class="text-sm">Message
-              <textarea required name="message" rows="4" class="mt-1 w-full rounded-xl border p-2"></textarea>
-            </label>
-            <button class="mt-2 inline-flex justify-center px-5 py-3 rounded-2xl bg-teal-600 text-white font-medium shadow hover:bg-teal-700">Send</button>
-            <p class="text-xs text-slate-500">This form uses Formspree; replace the action URL with your endpoint.</p>
-          </form>
         </div>
         <div class="rounded-2xl bg-white border p-6 shadow-sm">
           <h3 class="font-semibold">Email</h3>
