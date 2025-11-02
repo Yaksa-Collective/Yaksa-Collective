@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaksa Collective</title>
+  <meta name="description" content="Yaksa Collective — clarity of mind, nourishment of body, stillness of spirit." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230d9488'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='58' fill='white'%3Eॐ%3C/text%3E%3C/svg%3E" />
+  <style>
+    html{scroll-behavior:smooth}
+    .container{max-width:1100px}
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3 group">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-teal-600 text-white font-bold">Y</span>
+        <span class="font-semibold text-lg tracking-tight group-hover:text-teal-700">Yaksa Collective</span>
+      </a>
+      <button id="navBtn" class="md:hidden inline-flex items-center px-3 py-2 rounded-xl border border-slate-300" aria-label="Toggle navigation">☰</button>
+      <nav id="nav" class="hidden md:flex items-center gap-6 text-sm">
+        <a class="hover:text-teal-700" href="#vision">Vision</a>
+        <a class="hover:text-teal-700" href="#divisions">Divisions</a>
+        <a class="hover:text-teal-700" href="#team">Team</a>
+        <a class="hover:text-teal-700" href="#contact">Contact</a>
+      </nav>
+    </div>
+    <nav id="mobileNav" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-3 flex flex-col gap-2 text-sm">
+        <a class="hover:text-teal-700" href="#vision">Vision</a>
+        <a class="hover:text-teal-700" href="#divisions">Divisions</a>
+        <a class="hover:text-teal-700" href="#team">Team</a>
+        <a class="hover:text-teal-700" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="bg-gradient-to-b from-white to-slate-50">
+    <div class="container mx-auto px-4 py-16 sm:py-24">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">A welcoming house for clarity, nourishment, and stillness.</h1>
+          <p class="mt-4 text-slate-600 text-lg max-w-prose">Rooted in wisdom, open to all. Yaksa Collective brings together counselling, Korean‑inspired street food, and donation‑based meditation spaces.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#contact" class="inline-flex items-center px-5 py-3 rounded-2xl bg-teal-600 text-white font-medium shadow hover:bg-teal-700">Work with us</a>
+            <a href="#divisions" class="inline-flex items-center px-5 py-3 rounded-2xl ring-1 ring-slate-300 bg-white font-medium hover:bg-slate-100">Explore the divisions</a>
+          </div>
+        </div>
+        <div class="md:justify-self-end">
+          <div class="relative">
+            <div class="absolute -inset-2 rounded-3xl bg-teal-200 blur-2xl opacity-40"></div>
+            <div class="relative rounded-3xl bg-white p-6 shadow-xl border border-slate-200">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="p-4 rounded-2xl bg-slate-50 border"><h3 class="font-semibold">Lucid Mind</h3><p class="text-sm text-slate-600">Counselling & coaching for clarity.</p></div>
+                <div class="p-4 rounded-2xl bg-slate-50 border"><h3 class="font-semibold">Kkhatchi House</h3><p class="text-sm text-slate-600">Korean‑inspired street food with heart.</p></div>
+                <div class="p-4 rounded-2xl bg-slate-50 border"><h3 class="font-semibold">Yaksa House</h3><p class="text-sm text-slate-600">Donation‑based meditation spaces.</p></div>
+                <div class="p-4 rounded-2xl bg-slate-50 border"><h3 class="font-semibold">Community</h3><p class="text-sm text-slate-600">Workshops, pop‑ups, events.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision -->
+  <section id="vision" class="py-16 border-t border-slate-200 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold">Vision</h2>
+      <p class="mt-4 max-w-3xl text-slate-700">“To create a welcoming house where people find clarity of mind, nourishment of body, and stillness of spirit — rooted in wisdom, open to all.”</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-50 border">
+          <h3 class="font-semibold">Clarity</h3>
+          <p class="mt-2 text-sm text-slate-600">Evidence‑informed counselling with a human touch.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 border">
+          <h3 class="font-semibold">Nourishment</h3>
+          <p class="mt-2 text-sm text-slate-600">Street food that’s joyful, mindful, and fairly priced.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 border">
+          <h3 class="font-semibold">Stillness</h3>
+          <p class="mt-2 text-sm text-slate-600">Accessible meditation and community practice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divisions -->
+  <section id="divisions" class="py-16 bg-slate-50 border-t border-slate-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold">Divisions</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <!-- Lucid Mind -->
+        <article class="rounded-2xl bg-white border p-6 shadow-sm">
+          <h3 class="text-xl font-semibold">Lucid Mind</h3>
+          <p class="mt-2 text-slate-600">Counselling & coaching offering clear, practical support.</p>
+          <ul class="mt-4 list-disc list-inside text-sm text-slate-600">
+            <li>1–1 and group sessions</li>
+            <li>Evidence‑informed approaches</li>
+            <li>Sliding‑scale where possible</li>
+          </ul>
+          <a href="#contact" class="mt-4 inline-block text-teal-700 font-medium hover:underline">Enquire</a>
+        </article>
+        <!-- Kkhatchi House -->
+        <article class="rounded-2xl bg-white border p-6 shadow-sm">
+          <h3 class="text-xl font-semibold">Kkhatchi House</h3>
+          <p class="mt-2 text-slate-600">Korean‑inspired street food: bibimbap bowls, gilgeori toast, vegan corn dogs, and seasonal specials.</p>
+          <ul class="mt-4 list-disc list-inside text-sm text-slate-600">
+            <li>Markets, festivals, pop‑ups</li>
+            <li>Event catering</li>
+            <li>Vegetarian & vegan options</li>
+          </ul>
+          <a href="#contact" class="mt-4 inline-block text-teal-700 font-medium hover:underline">Book the stall</a>
+        </article>
+        <!-- Yaksa House -->
+        <article class="rounded-2xl bg-white border p-6 shadow-sm">
+          <h3 class="text-xl font-semibold">Yaksa House</h3>
+          <p class="mt-2 text-slate-600">Donation‑based meditation and mindful‑eating workshops launching later.</p>
+          <ul class="mt-4 list-disc list-inside text-sm text-slate-600">
+            <li>Drop‑in sits & guided practice</li>
+            <li>Community‑supported model</li>
+            <li>Inclusive & beginner‑friendly</li>
+          </ul>
+          <a href="#contact" class="mt-4 inline-block text-teal-700 font-medium hover:underline">Stay informed</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="py-16 bg-white border-t border-slate-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold">Team</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl bg-slate-50 border p-6">
+          <h3 class="font-semibold">Directors</h3>
+          <ul class="mt-2 text-sm text-slate-700 space-y-1">
+            <li>Dan O’Hare — Lead applicant (under 30)</li>
+            <li>Ben O’Hare — Co‑director (over 30)</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-slate-50 border p-6">
+          <h3 class="font-semibold">Managers / Partners</h3>
+          <ul class="mt-2 text-sm text-slate-700 space-y-1">
+            <li>Cecilia O’Hare — Counselling</li>
+            <li>Noah O’Hare — Support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-slate-50 border-t border-slate-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold">Contact</h2>
+      <p class="mt-4 text-slate-700 max-w-prose">Queries, collaborations, bookings — we’d love to hear from you.</p>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl bg-white border p-6 shadow-sm">
+          <form action="https://formspree.io/f/your-id" method="POST" class="grid gap-4">
+            <label class="text-sm">Name
+              <input required name="name" class="mt-1 w-full rounded-xl border p-2" />
+            </label>
+            <label class="text-sm">Email
+              <input required name="email" type="email" class="mt-1 w-full rounded-xl border p-2" />
+            </label>
+            <label class="text-sm">Message
+              <textarea required name="message" rows="4" class="mt-1 w-full rounded-xl border p-2"></textarea>
+            </label>
+            <button class="mt-2 inline-flex justify-center px-5 py-3 rounded-2xl bg-teal-600 text-white font-medium shadow hover:bg-teal-700">Send</button>
+            <p class="text-xs text-slate-500">This form uses Formspree; replace the action URL with your endpoint.</p>
+          </form>
+        </div>
+        <div class="rounded-2xl bg-white border p-6 shadow-sm">
+          <h3 class="font-semibold">Email</h3>
+          <p class="text-sm text-slate-700 mt-1"><a class="hover:underline text-teal-700" href="mailto:hello@yaksacollective.example">hello@yaksacollective.example</a></p>
+          <h3 class="font-semibold mt-4">Social</h3>
+          <ul class="text-sm text-slate-700 mt-1 space-y-1">
+            <li><a class="hover:underline text-teal-700" href="#">Instagram</a></li>
+            <li><a class="hover:underline text-teal-700" href="#">Bluesky</a></li>
+            <li><a class="hover:underline text-teal-700" href="#">Facebook</a></li>
+          </ul>
+          <h3 class="font-semibold mt-4">Press & bookings</h3>
+          <p class="text-sm text-slate-700 mt-1">For market/festival bookings and counselling referrals, include dates, location, and budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 bg-white border-t border-slate-200">
+    <div class="container mx-auto px-4 text-sm text-slate-600 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>© <span id="year"></span> Yaksa Collective. All rights reserved.</p>
+      <p class="opacity-80">Made with care in the UK.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navBtn = document.getElementById('navBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (navBtn) {
+      navBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+    }
+  </script>
+</body>
+</html>
