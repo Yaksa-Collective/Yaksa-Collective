@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Yaksa</title>
+  <meta name="description" content="Contact Yaksa." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.png?v=2" />
+  <style>.container{max-width:1100px}</style>
+</head>
+<body class="bg-stone-50 text-slate-800">
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-stone-200">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="favicon.png" alt="Yaksa logo" class="h-9 w-9 rounded-2xl border border-stone-300" />
+        <span><span class="block font-semibold text-lg tracking-tight group-hover:text-teal-700">Yaksa</span><span class="block text-sm text-slate-500 leading-tight">Poems, writings, and reflections</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="hover:text-teal-700" href="poems.html">Poems</a>
+        <a class="hover:text-teal-700" href="writings.html">Writings</a>
+        <a class="hover:text-teal-700" href="practice.html">Practice</a>
+        <a class="hover:text-teal-700" href="about.html">About</a>
+        <a class="text-teal-700 font-medium" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container mx-auto px-4 py-16 sm:py-20">
+    <div class="max-w-3xl">
+      <p class="text-sm font-medium uppercase tracking-[0.2em] text-teal-700">Contact</p>
+      <h1 class="mt-3 text-4xl font-extrabold leading-tight">Get in touch.</h1>
+      <p class="mt-5 text-lg text-slate-600">The contact form details have been kept as they were. Use this page for correspondence, questions, collaborations, or simple human contact.</p>
+    </div>
+    <section class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl bg-white border border-stone-200 p-6 shadow-sm">
+        <form id="contactForm" action="https://formspree.io/f/xvgvlkld" method="POST" class="grid gap-4">
+          <input type="hidden" name="_subject" value="Yaksa website message" />
+          <label class="text-sm">Name
+            <input required name="name" class="mt-1 w-full rounded-xl border p-2" />
+          </label>
+          <label class="text-sm">Email
+            <input required name="_replyto" type="email" class="mt-1 w-full rounded-xl border p-2" />
+          </label>
+          <label class="text-sm">Message
+            <textarea required name="message" rows="4" class="mt-1 w-full rounded-xl border p-2"></textarea>
+          </label>
+          <button class="mt-2 inline-flex justify-center px-5 py-3 rounded-2xl bg-teal-600 text-white font-medium shadow hover:bg-teal-700">Send</button>
+        </form>
+      </div>
+      <div class="rounded-2xl bg-white border border-stone-200 p-6 shadow-sm">
+        <h2 class="text-xl font-semibold">Email</h2>
+        <p class="text-sm text-slate-700 mt-2"><a class="hover:underline text-teal-700" href="mailto:bupsahn@yaksa.uk">bupsahn@yaksa.uk</a></p>
+        <h2 class="text-xl font-semibold mt-6">Elsewhere</h2>
+        <p class="text-sm text-slate-600 mt-2">The website is now the main centre of gravity. Social channels may remain quiet while the writing finds its proper form here.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="py-10 bg-white border-t border-stone-200"><div class="container mx-auto px-4 text-sm text-slate-600 flex flex-col sm:flex-row items-center justify-between gap-3"><p>© <span id="year"></span> Yaksa. All rights reserved.</p><p class="opacity-80">Made with care in the UK.</p></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
