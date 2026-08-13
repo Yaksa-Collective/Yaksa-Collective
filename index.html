@@ -203,7 +203,7 @@
 </head>
 <body>
   <section class="hero">
-    <video class="hero-animation" autoplay muted loop playsinline preload="auto" poster="assets/rice-field-poster.webp" aria-hidden="true">
+    <video id="riceField" class="hero-animation" autoplay muted playsinline preload="auto" poster="assets/rice-field-poster.webp" aria-hidden="true">
       <source src="assets/rice-field-smooth-v4.mp4" type="video/mp4">
     </video>
 
@@ -252,6 +252,27 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const riceField = document.getElementById("riceField");
+    riceField.muted = true;
+
+    const restartField = () => {
+      riceField.currentTime = 0;
+      riceField.play().catch(() => {});
+    };
+
+    riceField.addEventListener("ended", restartField);
+    riceField.addEventListener("timeupdate", () => {
+      if (riceField.duration && riceField.currentTime >= riceField.duration - 0.08) {
+        restartField();
+      }
+    });
+
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden && riceField.paused) {
+        riceField.play().catch(() => {});
+      }
+    });
 
   </script>
 </body>
