@@ -40,7 +40,7 @@
       background: #222719 url("assets/rice-field-poster.webp") center / cover no-repeat;
     }
 
-    .hero video {
+    .hero-animation {
       position: absolute;
       inset: 0;
       z-index: -3;
@@ -198,15 +198,13 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .hero video { display: none; }
+      .hero-animation { display: none; }
     }
   </style>
 </head>
 <body>
   <section class="hero">
-    <video id="riceField" autoplay muted loop playsinline preload="auto" poster="assets/rice-field-poster.webp" aria-hidden="true">
-      <source src="assets/rice-field.mp4" type="video/mp4">
-    </video>
+    <img class="hero-animation" src="assets/rice-field-loop.webp" alt="" aria-hidden="true">
 
     <header class="topbar">
       <a class="mark" href="index.html">Yaksa</a>
@@ -254,22 +252,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    const riceField = document.getElementById("riceField");
-    riceField.muted = true;
-    riceField.loop = true;
-
-    const keepRiceMoving = () => {
-      if (!document.hidden && riceField.paused) {
-        riceField.play().catch(() => {});
-      }
-    };
-
-    riceField.addEventListener("ended", () => {
-      riceField.currentTime = 0;
-      riceField.play().catch(() => {});
-    });
-    riceField.addEventListener("pause", keepRiceMoving);
-    document.addEventListener("visibilitychange", keepRiceMoving);
   </script>
 </body>
 </html>
