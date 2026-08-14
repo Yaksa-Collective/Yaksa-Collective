@@ -91,6 +91,20 @@
       text-transform: uppercase;
     }
 
+    .mark {
+      display: inline-flex;
+      align-items: center;
+      gap: .65rem;
+    }
+
+    .mark img {
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 0 1px rgba(238, 234, 222, .24);
+    }
+
     nav { display: flex; gap: clamp(1rem, 2.5vw, 2.2rem); }
     nav a { opacity: .82; transition: opacity 160ms ease; }
     nav a:hover, nav a:focus-visible { opacity: 1; }
@@ -240,7 +254,10 @@
     </video>
 
     <header class="topbar">
-      <a class="mark" href="index.html">Yaksa</a>
+      <a class="mark" href="index.html">
+        <img src="favicon.png" alt="">
+        <span>Yaksa</span>
+      </a>
       <nav aria-label="Main navigation">
         <a href="poems.html">Poems</a>
         <a href="writings.html">Writings</a>
