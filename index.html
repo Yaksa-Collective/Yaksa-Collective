@@ -21,6 +21,7 @@
 
     body {
       margin: 0;
+      overflow-x: hidden;
       background: var(--ink);
       color: var(--paper);
       font-family: Georgia, "Times New Roman", serif;
@@ -31,6 +32,7 @@
     a { color: inherit; }
 
     .hero {
+      width: 100%;
       min-height: 100svh;
       position: relative;
       display: grid;
@@ -56,8 +58,8 @@
       inset: 0;
       z-index: -2;
       background:
-        linear-gradient(180deg, rgba(9, 12, 7, .58) 0%, rgba(9, 12, 7, .12) 36%, rgba(9, 12, 7, .46) 100%),
-        linear-gradient(90deg, rgba(9, 12, 7, .18), transparent 55%);
+        linear-gradient(180deg, rgba(9, 12, 7, .48) 0%, rgba(9, 12, 7, .05) 40%, rgba(9, 12, 7, .5) 100%),
+        linear-gradient(90deg, rgba(9, 12, 7, .12), transparent 58%);
     }
 
     .hero::after {
@@ -94,28 +96,25 @@
     nav a:hover, nav a:focus-visible { opacity: 1; }
 
     .hero-title {
-      align-self: center;
+      align-self: end;
       width: min(1200px, calc(100% - 3rem));
       margin: 0 auto;
-      padding: 2rem 0 5rem;
+      padding: 5rem 0 3.5rem;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(5rem, 18vw, 14rem);
+      font-size: clamp(5rem, 15vw, 11.5rem);
       font-weight: 400;
       letter-spacing: -.055em;
       line-height: .8;
       text-shadow: 0 2px 35px rgba(0, 0, 0, .28);
     }
 
-    .hero-title p {
-      margin: 1.6rem 0 0 .35rem;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: .76rem;
-      font-weight: 600;
-      letter-spacing: .23em;
-      text-transform: uppercase;
+    .hero-statement {
+      margin: 1.4rem 0 0 .25rem;
+      font-size: clamp(1rem, 1.8vw, 1.35rem);
+      letter-spacing: .015em;
     }
 
     .down {
@@ -131,22 +130,34 @@
     }
 
     main {
-      width: min(960px, calc(100% - 3rem));
+      width: min(1100px, calc(100% - 3rem));
       margin: 0 auto;
       padding: clamp(5rem, 10vw, 9rem) 0;
     }
 
     .intro {
-      max-width: 740px;
-      margin: 0 0 5rem;
-      font-size: clamp(1.7rem, 3.5vw, 3rem);
+      max-width: 860px;
+      margin: 0 0 6rem;
+      font-size: clamp(1.75rem, 4.2vw, 3.75rem);
       line-height: 1.25;
+    }
+
+    .section-heading {
+      margin: 0;
+      padding: 0 0 1rem;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
     }
 
     .rooms {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--line);
+      margin-bottom: 6rem;
     }
 
     .room {
@@ -173,8 +184,28 @@
     .room h2 { margin: 0 0 .75rem; font-size: 1.8rem; font-weight: 400; }
     .room p { margin: 0; color: #c4c2b9; font-size: .95rem; }
 
+    .about-strip {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      padding: 1.5rem 0 2rem;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .about-strip h2 {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .about-strip p { margin: 0; color: #c4c2b9; }
+    .about-strip a { text-underline-offset: .25em; }
+
     footer {
-      width: min(960px, calc(100% - 3rem));
+      width: min(1100px, calc(100% - 3rem));
       margin: 0 auto;
       padding: 2rem 0 3rem;
       border-top: 1px solid var(--line);
@@ -194,6 +225,7 @@
       .room { min-height: auto; padding: 1.6rem 0 2rem; }
       .room + .room { padding-left: 0; border-left: 0; }
       .room small { margin-bottom: 1.5rem; }
+      .about-strip { grid-template-columns: 1fr; gap: 1rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -220,15 +252,16 @@
 
     <div class="hero-title">
       <h1>Yaksa</h1>
-      <p>Poems · writings · practice</p>
+      <p class="hero-statement">Buddhism, food and ordinary life.</p>
     </div>
 
     <a class="down" href="#work">The work ↓</a>
   </section>
 
   <main id="work">
-    <p class="intro">Buddhism, food and ordinary life.</p>
+    <p class="intro">Zen, food, politics, practice and whatever else needs more room than a poem allows.</p>
 
+    <h2 class="section-heading">Explore Yaksa</h2>
     <div class="rooms">
       <a class="room" href="poems.html">
         <small>01</small>
@@ -246,6 +279,11 @@
         <p>Meditation, mindful eating and daily life.</p>
       </a>
     </div>
+
+    <section class="about-strip">
+      <h2>About Yaksa</h2>
+      <p>A place for writing that is devotional, critical, argumentative and sometimes deliberately awkward. <a href="about.html">More about Yaksa →</a></p>
+    </section>
   </main>
 
   <footer>© <span id="year"></span> Yaksa</footer>
